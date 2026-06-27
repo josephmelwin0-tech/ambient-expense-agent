@@ -46,7 +46,7 @@ graph TD
         Dashboard[Cloud Run: Aether Dashboard] -->|Poll Pending Sessions| SessionStore
         Manager[Manager / Web UI] -->|1. View Pending Items| Dashboard
         Manager -->|2. Click Approve/Reject| Prompt[Passcode Prompt]
-        Prompt -->|3. Valid Passcode| ActionAPI[POST /api/action/{session_id}]
+        Prompt -->|3. Valid Passcode| ActionAPI["POST /api/action/{session_id}"]
         ActionAPI -->|4. Resume Session| AgentAPI
     end
 
